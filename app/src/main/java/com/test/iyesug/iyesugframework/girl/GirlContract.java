@@ -1,24 +1,24 @@
 package com.test.iyesug.iyesugframework.girl;
 
+import android.support.v4.view.ViewPager;
 import com.iyesug.base.BasePresenter;
 import com.iyesug.base.BaseView;
-import com.test.iyesug.iyesugframework.data.bean.GirlsBean;
-
-import java.util.List;
 
 /**
  * Created by Administrator on 2017/3/1.
  */
 public interface GirlContract {
     interface View extends BaseView{
-        void load(List<GirlsBean.ResultsEntity> datas);
-        void refresh(List<GirlsBean.ResultsEntity> datas);
-        void showErorr();
-        void showNormal();
+        void setText(int position);
 
+        interface OnGirlChange{
+            void change(int color);
+        }
     }
     interface Presenter extends BasePresenter{
-        void getGirls(int page, int size, boolean isRefresh);
+        void getColor(GirlAdapter girlAdapter);
+        void save(GirlAdapter girlAdapter, android.view.View linearLayout, ViewPager viewPager);
+        void share(GirlAdapter girlAdapter, final android.view.View linearLayout);
 
     }
 }

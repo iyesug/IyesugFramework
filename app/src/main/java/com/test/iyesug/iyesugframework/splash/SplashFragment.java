@@ -29,7 +29,7 @@ public class SplashFragment extends BaseFragment implements SplashContract.View{
 
     private ScaleAnimation scaleAnimation;
     private Unbinder unbinder;
-    private SplashPresenter splashPresenter;
+    private SplashContract.Presenter splashPresenter;
 
     public static SplashFragment getInstance(){
         LogUtil.d("SplashFragment.getInstance");
@@ -89,7 +89,7 @@ public class SplashFragment extends BaseFragment implements SplashContract.View{
     public void show() {
         LogUtil.d("SplashFragment.show");
         initAnim();
-        Object url=SPUtil.get(getContext(),"splash","");
+        Object url=SPUtil.get(getActivity().getApplication(),"splash","");
         if("".equals(url)){
             url=R.drawable.welcome;
         }
@@ -106,7 +106,7 @@ public class SplashFragment extends BaseFragment implements SplashContract.View{
     public void show(String url) {
         LogUtil.d("SplashFragment.show(String url) ");
         initAnim();
-        Glide.with(getActivity())
+        Glide.with(getContext().getApplicationContext())
                 .load(url)
                 .animate(scaleAnimation)
                 .into(imageView);

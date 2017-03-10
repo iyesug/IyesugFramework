@@ -37,7 +37,7 @@ public class HomeFragment extends BaseFragment implements HomeContract.View,Swip
     ViewStub viewStub;
 
     private Unbinder unbinder;
-    private HomePresenter homePresenter;
+    private HomeContract.Presenter homePresenter;
     private ArrayList<GirlsBean.ResultsEntity> datas;
     private HomeAdapter homeAdapter;
     private int size=20;

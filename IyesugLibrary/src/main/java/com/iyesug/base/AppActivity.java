@@ -19,7 +19,14 @@ public abstract class AppActivity extends  BaseActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //解决点图标重启app问题
+        if ((getIntent().getFlags() & Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT) != 0) {
+            //结束你的activity
+            finish();
+            return;
+        }
         setContentView(getContentLayout());
+
         if(null!=getIntent()){
             HandleIntent(getIntent());
         }
