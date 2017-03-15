@@ -5,6 +5,13 @@
     <color name="colorAccent">#ffc107</color>
     <color name="swipe_background_color">#ffffff</color>
     <color name="white">#ffffff</color>
-    <color name="gray">#eeeeee</color>
+    <color name="gray">#aaaaaa</color>
     <color name="black">#000000</color>
+    <color name="red">#AB0000</color>
+    <color name="green">#007000</color>
+    <color name="blue">#47007E</color>
+
+
+    <color name="tab_checked">@color/white</color>
+    <color name="tab_unchecked">@color/gray</color>
 </resources>

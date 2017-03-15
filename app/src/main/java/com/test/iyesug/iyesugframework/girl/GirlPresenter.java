@@ -109,9 +109,9 @@ public class GirlPresenter implements GirlContract.Presenter {
                     @Override
                     public void call(Boolean isSuccess) {
                         if (isSuccess) {
-                            Snackbar.make(linearLayout, "下载好了呢~", Snackbar.LENGTH_LONG).show();
+                            Snackbar.make(linearLayout, "下载好了~", Snackbar.LENGTH_LONG).show();
                         } else {
-                            Snackbar.make(linearLayout, "下载出错了哦~", Snackbar.LENGTH_LONG).show();
+                            Snackbar.make(linearLayout, "下载出错了~", Snackbar.LENGTH_LONG).show();
                         }
                     }
                 });

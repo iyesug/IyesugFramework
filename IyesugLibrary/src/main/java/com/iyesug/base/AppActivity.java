@@ -29,6 +29,7 @@ public abstract class AppActivity extends  BaseActivity {
 
         if(null!=getIntent()){
             HandleIntent(getIntent());
+
         }
         if(null==getSupportFragmentManager().getFragments()){
             BaseFragment fistFragment=getFistFragment();

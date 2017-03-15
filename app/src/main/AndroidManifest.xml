@@ -23,6 +23,10 @@
             </intent-filter>
         </activity>
         <activity
+                android:name=".main.MainActivity"
+                android:launchMode="singleTask"
+                android:screenOrientation="portrait"/>
+        <activity
                 android:name=".home.HomeActivity"
                 android:launchMode="singleTask"
                 android:screenOrientation="portrait"/>
